@@ -40,5 +40,18 @@ class AppTextstyle {
    color: Color(0xffd1610c),
    fontWeight: FontWeight.w300,
  );
+ static  TextStyle textStyle64yellowW700 = GoogleFonts.poppins(
+   fontSize: 64 ,
+   color: Color(0xffddb130),
+   fontWeight: FontWeight.w700,
+ );
+ static  TextStyle textStyle64whiteW700 = GoogleFonts.poppins(
+   fontSize: 64 ,
+   color: Color(0xffffffff),
+   fontWeight: FontWeight.w700,
+ );
+
+
+
 
 }
