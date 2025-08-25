@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         // Your desired background color
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-    //  home: const Homepage(),
-      home: const hometw(),
+    home: const Homepage(),
+     // home: const hometw(),
     );
   }
 

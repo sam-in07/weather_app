@@ -50,6 +50,27 @@ class AppTextstyle {
    color: Color(0xffffffff),
    fontWeight: FontWeight.w700,
  );
+ static  TextStyle textStyle64whiteW500 = GoogleFonts.poppins(
+   fontSize: 64,
+   color: const Color(0xffffffff),
+   fontWeight: FontWeight.w500,
+   height: 0.46,
+   letterSpacing: 0.47,
+ );
+  static TextStyle textStyle24whiteW400 = GoogleFonts.poppins(
+    fontSize: 24,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w400,
+    height: 1.24,
+    letterSpacing: 0.47,
+  );
+  static TextStyle textStyle20whiteW600 = GoogleFonts.openSans(
+    fontSize: 20,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w600,
+    height: 1.49,
+    letterSpacing: 0.47,
+  );
 
 
 
