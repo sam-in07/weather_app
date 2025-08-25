@@ -15,6 +15,7 @@ class Homepage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+
             Container(
                width: 428,
                height:  428,
@@ -42,13 +43,14 @@ class Homepage extends StatelessWidget {
               style: AppTextstyle.textStyle64yellowW700,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 100,),
+            SizedBox(height: 53,),
             PrimaryButton(
               title: "Get Start",
               height: 72,
               width: 304,
               radius: 50,
               color: Color(0xFFDDB130),
+
               textStyle: TextStyle(
                 color: Color(0xFF362A84),
                 fontSize: 28,

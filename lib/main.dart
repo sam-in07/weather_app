@@ -13,14 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Weather APP',
       theme: ThemeData(
-
+        scaffoldBackgroundColor: Color(0xFF560B88),
+        // Your desired background color
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const   Homepage(),
+      home: const Homepage(),
     );
   }
+
 }
 
 

@@ -4,13 +4,23 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+**Homepage()**
 
-A few resources to get you started if this is your first Flutter project:
+The Homepage widget is a stateless widget that builds the main 
+UI of the app. It includes a background color (instead of an image) and 
+styled text using the GoogleFonts package. Here's what it contains:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+*A Scaffold with a custom background color (Color(0xFF362A84)).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*Centered text displaying "Weather App" as a title.
+
+*Typography powered by Google Fonts, e.g., using Poppins or any other chosen font.
+
+**Image:**
+![img.png](img.png)
+
+**Tools & Packages Used**
+| Package                 | Purpose                                 |
+|-------------------------|-----------------------------------------|
+| `google_fonts`          | Custom typography matching Figma design |
+| `flutter/material.dart` | Core UI widgets                         |
