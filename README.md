@@ -17,6 +17,9 @@ styled text using the GoogleFonts package. Here's what it contains:
 *Typography powered by Google Fonts, e.g., using Poppins or any other chosen font.
 
 **Image:**
+
+
+
 ![img.png](img.png)
 
 **Tools & Packages Used**
