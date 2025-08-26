@@ -72,7 +72,18 @@ class hometw extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
+              Container(
+                width: 428,
+                decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      width: 2,
+                      strokeAlign: BorderSide.strokeAlignInside,
+                      color: const Color(0xFF8D78C7),
+                    ),
+                  ),
+                ),
+              ),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
