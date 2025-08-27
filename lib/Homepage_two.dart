@@ -76,15 +76,15 @@ class hometw extends StatelessWidget {
               // Divider line
               Container(
               //  width: double.infinity,
-                width: 428
-                  ,
+                width: 428 ,
+
                 height: 0,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
                       width: 2,
                       color: const Color(0xFF8D78C7),
-                      strokeAlign: BorderSide.strokeAlignCenter,
+                      strokeAlign: BorderSide.strokeAlignOutside,
                     ),
                   ),
                 ),
