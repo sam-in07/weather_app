@@ -7,7 +7,13 @@ import 'data/app_text.dart';
 import 'data/app_text_style.dart';
 
 class hometw extends StatelessWidget {
-  const hometw({super.key});
+   hometw({super.key});
+  final List<Map<String, String>> forecast = [
+    {"temp": "19°C", "icon": "assets/images/clds_sm.png", "time": "15.00"},
+    {"temp": "18°C", "icon": "assets/images/rain_sm.png", "time": "16.00"},
+    {"temp": "18°C", "icon": "assets/images/rain_sm.png", "time": "17.00"},
+    {"temp": "18°C", "icon": "assets/images/rain_sm.png", "time": "18.00"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -56,83 +62,56 @@ class hometw extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(
             children: [
-              // Header row (Today - July, 21)
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Today",
-                    style: AppTextstyle.textStyle20whiteW600,
-                  ),
-                  Text(
-                    "July, 21",
-                    style: AppTextstyle.textStyle20whiteW600,
-                  ),
+                  Text("Today", style: AppTextstyle.textStyle20whiteW600),
+                  Text("July, 21", style: AppTextstyle.textStyle20whiteW600),
                 ],
               ),
 
               const SizedBox(height: 20),
+
+              // Divider line
               Container(
-                width: 428,
+              //  width: double.infinity,
+                width: 428
+                  ,
+                height: 0,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
                       width: 2,
-                      strokeAlign: BorderSide.strokeAlignInside,
                       color: const Color(0xFF8D78C7),
+                      strokeAlign: BorderSide.strokeAlignCenter,
                     ),
                   ),
                 ),
               ),
 
+
+              const SizedBox(height: 20),
+
+              // Forecast row (generated automatically)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
+                children: forecast.map((item) {
+                  return Column(
                     children: [
-                      Text("19°C", style: AppTextstyle.textStyle20whiteW600),
+                      Text(item["temp"]!, style: AppTextstyle.textStyle20whiteW600),
                       const SizedBox(height: 8),
-                     // Image.asset("assets/icons/sun_rain.png", height: 40),
-                      Image.asset("assets/images/clds_sm.png", height: 40),
+                      Image.asset(item["icon"]!, height: 40),
                       const SizedBox(height: 8),
-                      Text("15.00", style: AppTextstyle.textStyle20whiteW600),
+                      Text(item["time"]!, style: AppTextstyle.textStyle20whiteW600),
                     ],
-                  ),
-
-                  Column(
-                    children: [
-                      Text("18°C", style: AppTextstyle.textStyle20whiteW600),
-                      const SizedBox(height: 8),
-                      Image.asset("assets/images/rain_sm.png", height: 40),
-                      const SizedBox(height: 8),
-                      Text("16.00", style: AppTextstyle.textStyle20whiteW600),
-                    ],
-                  ),
-
-                  Column(
-                    children: [
-                      Text("18°C", style: AppTextstyle.textStyle20whiteW600),
-                      const SizedBox(height: 8),
-                      Image.asset("assets/images/rain_sm.png", height: 40),
-                      const SizedBox(height: 8),
-                      Text("17.00", style: AppTextstyle.textStyle20whiteW600),
-                    ],
-                  ),
-
-                  Column(
-                    children: [
-                      Text("18°C", style: AppTextstyle.textStyle20whiteW600),
-                      const SizedBox(height: 8),
-                      Image.asset("assets/images/rain_sm.png", height: 40),
-                      const SizedBox(height: 8),
-                      Text("18.00", style: AppTextstyle.textStyle20whiteW600),
-                    ],
-                  ),
-                ],
+                  );
+                }).toList(),
               ),
             ],
           ),
         ),
+
 
 
 
