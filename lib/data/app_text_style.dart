@@ -71,6 +71,13 @@ class AppTextstyle {
     height: 1.49,
     letterSpacing: 0.47,
   );
+  static TextStyle textStyle24whiteW700 = GoogleFonts.openSans(
+    fontSize: 24,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w700,
+    height: 1.49,
+    letterSpacing: 0.47,
+  );
 
 
 
