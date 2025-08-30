@@ -22,11 +22,52 @@ class homett extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 52,) ,
-              Text(
-                AppText.seven,
-                style: AppTextstyle.textStyle24whiteW700,
-                textAlign: TextAlign.left,
+              Row(
+                children: [
+                  const SizedBox(width: 50), // left gap
+                  Text(
+                    AppText.seven,
+                    style: AppTextstyle.textStyle24whiteW700,
+                  ),
+                  const Spacer(),
+                  const SizedBox(width: 118), // right gap
+                ],
               ),
+
+              SizedBox(height: 14,) ,
+              SizedBox(
+                height: 172, // container height
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 7, // সাত দিনের জন্য
+                  separatorBuilder: (_, __) => const SizedBox(width: 12), // gap between boxes
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 82,
+                      height: 172,
+                      decoration: ShapeDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment(0.50, -0.00),
+                          end: Alignment(0.50, 1.00),
+                          colors: [Color(0xFF3D2C8E), Color(0xFF9D52AC)],
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Day ${index + 1}",
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
+
+
+
             ],
           ),
         )
