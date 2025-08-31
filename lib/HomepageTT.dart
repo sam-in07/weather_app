@@ -36,35 +36,54 @@ class homett extends StatelessWidget {
 
               SizedBox(height: 14,) ,
               SizedBox(
-                height: 172, // container height
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 7, // সাত দিনের জন্য
-                  separatorBuilder: (_, __) => const SizedBox(width: 12), // gap between boxes
+                height: MediaQuery.of(context).size.height * 0.25,
+                child: PageView.builder(
+                  controller: PageController(viewportFraction: 0.25), // এক স্ক্রিনে 4টা
+                  itemCount: 7, // 7 days
                   itemBuilder: (context, index) {
-                    return Container(
-                      width: 82,
-                      height: 172,
-                      decoration: ShapeDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment(0.50, -0.00),
-                          end: Alignment(0.50, 1.00),
-                          colors: [Color(0xFF3D2C8E), Color(0xFF9D52AC)],
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 6),
+                      child: Container(
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              const Color(0xFF3D2C8E).withOpacity(0.9),
+                              const Color(0xFF9D52AC).withOpacity(0.9),
+                            ],
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
+                          ),
                         ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Day ${index + 1}",
-                          style: const TextStyle(color: Colors.white),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "${18 + (index % 3)}°C", // temp
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Icon(Icons.cloud, size: 32, color: Colors.white),
+                            const SizedBox(height: 8),
+                            Text(
+                              ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][index],
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
                     );
                   },
                 ),
               )
+
+
 
 
 
