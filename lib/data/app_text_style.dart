@@ -78,6 +78,24 @@ class AppTextstyle {
     height: 1.49,
     letterSpacing: 0.47,
   );
+  static TextStyle textStyle16whiteW400 = GoogleFonts.openSans(
+    fontSize: 16,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w400,
+    height: 29 / 16,
+  );
+  static TextStyle textStyle28whiteW600 = GoogleFonts.openSans(
+    fontSize: 28,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w600,
+
+  );
+  static TextStyle textStyle18whiteW600 = GoogleFonts.openSans(
+    fontSize: 18,
+    color: const Color(0xffffffff),
+    fontWeight: FontWeight.w600,
+
+  );
 
 
 

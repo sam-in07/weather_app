@@ -9,5 +9,6 @@ class AppText {
   static const String seven = '7-Days Forecasts';
   static const String today = 'Today';
   static const String july = 'July, 21';
+  static const String sun = 'SUNRISE';
 
 }

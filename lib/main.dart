@@ -16,13 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Weather APP',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFF560B88),
-        // Your desired background color
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+
+      debugShowCheckedModeBanner: false,
     //home: const Homepage(),
      // home:  hometw(),
+
       home:  homett(),
     );
   }

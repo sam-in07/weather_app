@@ -6,7 +6,7 @@ import 'package:weather_app/widgets/primary_button.dart';
 import 'data/app_text_style.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  const Homepage({ super.key });
 
   @override
   Widget build(BuildContext context) {
