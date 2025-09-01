@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       title: 'Weather APP',
 
       debugShowCheckedModeBanner: false,
-    //home: const Homepage(),
+    home: const Homepage(),
      // home:  hometw(),
 
-      home:  homett(),
+    //  home:  homett(),
     );
   }
 

@@ -2,6 +2,7 @@
 
 import 'package:weather_app/widgets/seven_days_forecast.dart';
 
+import 'Homepage_two.dart';
 import 'data/app_text.dart';
 
 import 'package:flutter/material.dart';
@@ -99,7 +100,8 @@ class homett extends StatelessWidget {
                         height: 4,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xff8158C3), Color(0xfff362A84)],
+                            colors: [Color(0xff8158C3),
+                              Color(0xfff362A84)],
                           ),
                         ),
                       ),
@@ -129,67 +131,76 @@ class homett extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  width: 161,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1,color: Colors.white),
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [Color(0xff3e2d8f), Color(0x009d52ac)],
-                    ),
-                  ),
 
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => hometw()),
+                      );
+                    },
+                    child: Container(
+                      width: 161,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: Colors.white),
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                          colors: [Color(0xff3e2d8f), Color(0x009d52ac)],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 14,
-                              horizontal: 5,
-                            ),
-                            child: Container(
-                              height: 36,
-                              width: 36,
-                              child: Image.asset(
-                                'images/star_.png',
-                                fit: BoxFit.cover,
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 14,
+                                  horizontal: 5,
+                                ),
+                                child: Container(
+                                  height: 36,
+                                  width: 36,
+                                  child: Image.asset(
+                                    'images/star_.png',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
+                              Text(
+                                AppText.sun,
+                                style: AppTextstyle.textStyle16whiteW400,
+                                textAlign: TextAlign.left,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(
+                              '5:28 AM',
+                              style: AppTextstyle.textStyle28whiteW600,
                             ),
                           ),
-                          Text(
-                            AppText.sun,
-                            style: AppTextstyle.textStyle16whiteW400,
-                            textAlign: TextAlign.left,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13),
+                            child: Text(
+                              'Sunset: 7.25PM',
+                              style: AppTextstyle.textStyle18whiteW600,
+                            ),
                           ),
                         ],
                       ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 13),
-                        child: Text(
-                          '5:28 AM',
-                          style:AppTextstyle.textStyle28whiteW600,
-                        ),
-
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 13),
-                        child: Text(
-                          'Sunset: 7.25PM'
-                          ,
-                          style:AppTextstyle.textStyle18whiteW600,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                SizedBox(width: 13),
+                  SizedBox(width: 13),
+
+                  // You can add more tappable cards in the same format
+
+
                 Container(
                   width: 161,
                   height: 150,
